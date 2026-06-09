@@ -107,3 +107,13 @@ playButtons.forEach(button => {
 
 });
 
+if (window.innerWidth <= 768) {
+    const cards = document.querySelectorAll('.favorite-card');
+    const notes = document.querySelectorAll('.movie-note');
+
+    cards.forEach((card, i) => {
+        if (notes[i]) {
+            card.appendChild(notes[i]);
+        }
+    });
+}
