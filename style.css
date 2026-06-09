@@ -555,7 +555,7 @@ nav a:hover{
 .showreel-header{
     padding:0 60px;
     margin-bottom:60px;
-}
+}   
 
 .showreel-header span{
     font-size:.9rem;
@@ -984,7 +984,7 @@ html.lenis body{
         flex-direction:column;
         margin-top:55px;
         height:auto;
-        overflow:hidden;
+        overflow:auto;
     }
 
     .hero{
@@ -1144,14 +1144,19 @@ html.lenis body{
     }
 
     .showreel-track{
-        padding-left:20px;
-        gap:20px;
-        overflow-x:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    transform:none !important;
     }
 
     .showreel-item{
-        width:300px;
-        height:170px;
+        width:100%;
+    }
+
+    .showreel-link{
+        width:100%;
+        display:block;
     }
 
     /* MOVIES */
@@ -1256,58 +1261,61 @@ html.lenis body{
         transform-origin:center center;
     }
 
-    .showreel-section{
+/* SHOWREEL */
+
+.showreel-section{
+    height:auto !important;
+    min-height:auto !important;
+    padding:20px 0;
+    overflow:visible;
+}
+
+.showreel-sticky{
+    position:static !important;
+    top:auto;
     height:auto !important;
     min-height:auto !important;
     overflow:visible;
-    }
+    display:block;
+}
 
-    .showreel-track{
-        transform:none !important;
-        position:static !important;
-    }
+.showreel-header{
+    padding:0 20px;
+    margin-bottom:25px;
+}
 
-        .showreel-track{
-        display:flex !important;
-        flex-direction:row !important;
+.showreel-header h2{
+    font-size:4.4rem;
+    line-height:1;
+    letter-spacing:-2px;
+}
 
-        overflow-x:auto;
-        overflow-y:hidden;
+.showreel-track{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:100%;
+    padding:0 20px;
+    transform:none !important;
+}
 
-        gap:16px;
+.showreel-link{
+    display:block;
+    width:100%;
+}
 
-        scroll-snap-type:x mandatory;
-        -webkit-overflow-scrolling:touch;
+.showreel-item{
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    border-radius:18px;
+}
 
-        transform:none !important;
-        width:max-content;
-    }
-
-    .showreel-card{
-        flex:0 0 85vw;
-        scroll-snap-align:start;
-    }
-
-    .showreel-sticky{
-    position:static !important;
-    height:auto !important;
-    min-height:auto !important;
-    }
-
-    .showreel-section{
-    height:auto !important;
-    min-height:auto !important;
-    padding-bottom:0 !important;
-    margin-bottom:0 !important;
-    }
-
-    .showreel-track{
-    height:auto !important;
-    }
-
-    .showreel-item{
-        width:85vw;
-    }
+.showreel-item video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
     .favorites-section{
     display:flex;
